@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-text: white;
+  --color-bg: papayawhip;
+  --color-bg-accent: #ecdcc0;
+  --size: clamp(10rem, 1rem + 40vmin, 30rem);
+  --gap: calc(var(--size) / 14);
+  --duration: 30s;
+  --scroll-start: 0;
+  --scroll-end: calc(-100% - var(--gap));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: papayawhip;
+    --color-bg: navy;
+    --color-bg-accent: #2626a0;
+  }
+}
+
+
+/* Text and theme colours */
+.text-content {
+    color: rgba(10, 16, 13, 0.7)
+}
+
+.text-ice-teal {
+    color: #2A9D8F;
+}
+
+.text-ice-red {
+    color: #E76E50;
+}
+
+.text-ice-yellow {
+    color: #E9C46A;
+}
+
+.bg-teal {
+    background-color: #2A9D8F;
+}
+
+.bg-soft-teal {
+    background-color: rgba(42, 157, 143, 0.3);
+}
+
+.bg-soft-red {
+    background-color: rgba(231, 111, 81, 0.3);
+}
+
+.bg-soft-yellow {
+    background-color: rgba(233, 196, 106, 0.3);
+}
+
+.bg-ice-off-white {
+    background-color: #F9F9F9;
+}
+
+.bg-ice-grey {
+    background-color: rgba(232, 232, 223, 0.4);
+}
+
+
+/* Font styles */
+.font-cursive {
+    font-family: "Caveat", cursive;
+}
+
+.font-robo {
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* ---------------- Scrollbar -------------------- */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(233, 196, 106, 0.2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(42, 157, 143, 0.4);
+    border-radius: 5px;
+    max-height: 40px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(42, 157, 143, 0.7);
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+
+/* ------ HTML and body pre-set styling ------- */
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(10, 16, 13, 0.9);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+
+/* --------- Navigation hover animation ---------*/
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:hover {
+    color: #2A9D8F;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #2A9D8F;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+  transform-origin: bottom right;
+}
+
+.hover-underline-animation.left:hover::after {
+  transform-origin: bottom left;
+}
+
+
+/* ------------- Marquee ----------------*/
+
+/* body {
+  display: grid;
+  align-content: center;
+  overflow: hidden;
+  gap: var(--gap);
+  width: 100%;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+} */
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(
+    var(--mask-direction, to right),
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+.marquee-group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: scroll-x var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-group {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(var(--scroll-start));
+  }
+  to {
+    transform: translateX(var(--scroll-end));
+  }
+}
+
+/* Element styles */
+.marquee span {
+  display: grid;
+  place-items: center;
+}
+
+/* Parent wrapper */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 100vw;
+}
+
+@keyframes fade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Hover lift for cards */
+
+.hover-lift {
+    transition-property: transform;
+    transition-duration: .3s;
+    animation-duration: .3s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+    .hover-lift:hover {
+        transform: translate(0, -0.5rem);
+    }
