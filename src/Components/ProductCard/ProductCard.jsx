@@ -1,6 +1,6 @@
-const ProductCard = ({imageUrl, title, description, category}) => {
+const ProductCard = ({ imageUrl, title, description, category }) => {
     return (
-        <div className="bg-white overflow-hidden rounded-xl shadow-md hover-lift cursor-pointer">
+        <div className="z-1 bg-white overflow-hidden rounded-xl shadow-md hover-lift cursor-pointer">
             <div className="h-48 overflow-hidden">
                 <img className="w-full h-full object-cover hover:scale-125 duration-300" src={imageUrl} alt={title} />
             </div>
