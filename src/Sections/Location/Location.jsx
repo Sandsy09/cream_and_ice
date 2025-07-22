@@ -2,6 +2,18 @@ import sohoShop from '../../assets/sohoShop.jpg'
 import boroughShop from '../../assets/boroughShop.jpg'
 import LocationCard from "../../Components/LocationCard/LocationCard";
 
+const sohoOpening = [
+    "Mon-Fri: 12pm - 9pm",
+    "Saturday: 12pm - 11pm",
+    "Sunday: Closed"
+]
+
+const boroughOpening = [
+    "Mon-Fri: 10am - 5pm",
+    "Saturday: 10am - 7pm",
+    "Sunday: 10am - 4pm"
+]
+
 const Location = () => {
     return (
         <section id="section-location" className="py-24 px-6 relative overflow-hidden bg-teal">
@@ -19,10 +31,16 @@ const Location = () => {
                     <LocationCard 
                         heading={"Soho"}
                         shopImage={sohoShop}
+                        shopName={"Soho Scoops"}
+                        shopAddress={"37-41 Mortimer St, London W1T 3JH"}
+                        openTimes={sohoOpening}
                     />
                     <LocationCard 
                         heading={"Borough Market"}
                         shopImage={boroughShop}
+                        shopName={"Borough Scoops"}
+                        shopAddress={"Borough Market, Cathedral St, London SE1 9DE"}
+                        openTimes={boroughOpening}
                     />
                 </div>
                 <div className="flex">

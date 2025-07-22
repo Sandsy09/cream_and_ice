@@ -18,19 +18,19 @@ const BannerCarousel = () => {
         //     </div> text-lg md:text-2xl font-cursive text-white font-bold uppercase
         // </div>
         <div className="wrapper bg-teal">
-            <div class="marquee py-8">
-                <div class="marquee-group">
+            <div className="marquee py-8">
+                <div className="marquee-group">
                     {
                         descriptors.map((desc, i) => {
-                            return <span key={`descriptor-${i}`} class="text-lg md:text-2xl font-cursive text-white font-bold uppercase mx-6">{desc}</span>
+                            return <span key={`descriptor-${i}`} className="text-lg md:text-2xl font-cursive text-white font-bold uppercase mx-6">{desc}</span>
                         })
                     }
                 </div>
 
-                <div aria-hidden="true" class="marquee-group">
+                <div aria-hidden="true" className="marquee-group">
                     {
                         descriptors.map((desc, i) => {
-                            return <span key={`descriptor2-${i}`} class="text-lg md:text-2xl font-cursive text-white font-bold uppercase mx-6">{desc}</span>
+                            return <span key={`descriptor2-${i}`} className="text-lg md:text-2xl font-cursive text-white font-bold uppercase mx-6">{desc}</span>
                         })
                     }
                 </div>

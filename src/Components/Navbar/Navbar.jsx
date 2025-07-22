@@ -3,34 +3,46 @@ import NavItem from './NavItem/NavItem';
 
 import logo from '../../assets/ice-cream.png'
 
-function Navbar() {
+
+
+function Navbar({ toggleMenu, menuActive }) {
+    const toggleClass = menuActive ? 'hamburger-active' : ''
+
     return (
-        <nav className='flex justify-between items-center'>
+        <nav className='flex justify-between items-center min-w-[150px]'>
             <NavLogo
                 logo={logo}
                 brand='Cream & Ice'
                 tagline='LUXURY ICE CREAM'
             />
-            <div className='flex item-center space-x-8'>
+            <div id='screen-nav' className='flex item-center space-x-8'>
                 <NavItem
                     linkText='Home'
                 />
                 <NavItem
-                    link='/flavors'
+                    link='flavors'
                     linkText='Flavors'
                 />
                 <NavItem
-                    link='/catering'
+                    link='catering'
                     linkText='Catering'
                 />
                 <NavItem
-                    link='/locations'
+                    link='locations'
                     linkText='Locations'
                 />
                 <NavItem
-                    link='/careers'
+                    link='careers'
                     linkText='Careers'
                 />
+            </div>
+            <div
+                className={`hamburger z-500 bg-white ${toggleClass}`}
+                onClick={toggleMenu}
+            >
+                <span className="line"></span>
+                <span className="line"></span>
+                <span className="line"></span>
             </div>
         </nav>
     )

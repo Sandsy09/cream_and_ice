@@ -20,6 +20,10 @@
   }
 }
 
+@theme {
+  --ice-yellow: #E9C46A
+}
+
 
 /* Text and theme colours */
 .text-content {
@@ -41,6 +45,11 @@
 .bg-teal {
     background-color: #2A9D8F;
 }
+
+.bg-yellow {
+    background-color: #E9C46A;
+}
+
 
 .bg-soft-teal {
     background-color: rgba(42, 157, 143, 0.3);
@@ -227,12 +236,72 @@ body {
 /* Hover lift for cards */
 
 .hover-lift {
-    transition-property: transform;
-    transition-duration: .3s;
-    animation-duration: .3s;
-    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-property: transform;
+  transition-duration: .3s;
+  animation-duration: .3s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-    .hover-lift:hover {
-        transform: translate(0, -0.5rem);
-    }
+  .hover-lift:hover {
+    transform: translate(0, -0.5rem);
+  }
+
+
+/* Hamburger Nav */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 1px;
+  background-color: #000;
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+  transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+.active {
+  left: 0
+}
+
+@media screen and (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+  #screen-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #nav-logo-text {
+    display: none;
+  }
+}
+
