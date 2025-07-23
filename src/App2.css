@@ -21,7 +21,9 @@
 }
 
 @theme {
-  --ice-yellow: #E9C46A
+  --ice-yellow: #E9C46A;
+  --ice-teal: #2A9D8F;
+  --ice-red: #E76E50;
 }
 
 

@@ -13,7 +13,9 @@ function Navbar({ toggleMenu, menuActive }) {
             <NavLogo
                 logo={logo}
                 brand='Cream & Ice'
+                brandColor='--ice-teal'
                 tagline='LUXURY ICE CREAM'
+                tagColor='--ice-red'
             />
             <div id='screen-nav' className='flex item-center space-x-8'>
                 <NavItem

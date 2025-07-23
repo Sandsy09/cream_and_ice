@@ -1,16 +1,13 @@
-import { act, Component, useState } from 'react'
-import './App2.css'
-import Navbar from './Components/Navbar/Navbar'
-import MobileNav from './Components/MobileNav/MobileNav'
-import BannerCarousel from './Components/BannerCarousel/BannerCarousel'
-import HomeBanner from './components/HomeBanner/HomeBanner'
-import Story from './Sections/Story/Story'
-import Product from './Sections/Product/Product'
-import Location from './Sections/Location/Location'
-import Reviews from './Sections/Reviews/Reviews'
-import Careers from './Sections/Careers/Careers'
+import { Component } from 'react'
+import { Routes, Route } from 'react-router';
 
-import storyPhoto from './assets/ice-cream-cones.jpg'
+import HomePage from './Pages/HomePage'
+import FlavorsPage from './Pages/FlavorsPage';
+import CateringPage from './Pages/CateringPage';
+import LocationsPage from './Pages/LocationsPage';
+import CareersPage from './Pages/CareersPage';
+
+import './App2.css'
 
 
 class App extends Component {
@@ -29,29 +26,14 @@ class App extends Component {
   }
 
   render() {
-    const activeClass = this.state.menuToggle
-
     return (
-      <>
-        <header className='sticky top-0 left-0 bg-white z-50 shadow-md py-3 px-5 md:px-8'>
-          <div className="container mx-auto px-8">
-            <Navbar toggleMenu={this.toggleMenu} menuActive={this.state.menuToggle} />
-          </div>
-          <MobileNav menuActive={this.state.menuToggle} />
-        </header>
-        <main>
-          <HomeBanner />
-          <BannerCarousel />
-          <Story storyPhoto={storyPhoto} />
-          <Product />
-          <Location />
-          <Reviews />
-          <Careers />
-        </main>
-        <footer>
-          <h2 className='text-8xl'>FOOTER PLACEHOLDER</h2>
-        </footer>
-      </>
+      <Routes>
+        <Route path='/cream_and_ice' element={<HomePage toggleMenu={this.toggleMenu} menuToggle={this.state.menuToggle} />} />
+        <Route exact path='/cream_and_ice/flavors' element={<FlavorsPage toggleMenu={this.toggleMenu} menuToggle={this.state.menuToggle} />} />
+        <Route exact path='/cream_and_ice/catering' element={<CateringPage toggleMenu={this.toggleMenu} menuToggle={this.state.menuToggle} />} />
+        <Route exact path='/cream_and_ice/locations' element={<LocationsPage toggleMenu={this.toggleMenu} menuToggle={this.state.menuToggle} />} />
+        <Route exact path='/cream_and_ice/careers' element={<CareersPage toggleMenu={this.toggleMenu} menuToggle={this.state.menuToggle} />} />
+      </Routes>
     )
   }
 }
