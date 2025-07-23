@@ -4,8 +4,8 @@ const NavLogo = ({ logo, brand, tagline, tagColor, brandColor }) => {
             <div className="flex items-center">
                 <img className="h-12 w-12 mr-3" src={logo} alt="Ice Cream Logo" />
                 <div id="nav-logo-text" className="relative z-10">
-                    <span className={`font-cursive text-(${brandColor}) font-bold text-3xl md:text-4xl`}>{brand}</span>
-                    <span className={`block text-xs font-robo text-(${tagColor}) tracking-wider mt-[-0.25rem]`}>{tagline}</span>
+                    <span className={`font-cursive ${brandColor} font-bold text-3xl md:text-4xl`}>{brand}</span>
+                    <span className={`block text-xs font-robo ${tagColor} tracking-wider mt-[-0.25rem]`}>{tagline}</span>
                 </div>
             </div>
         </a>

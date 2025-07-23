@@ -10,9 +10,9 @@ const Footer = () => {
                     <NavLogo 
                         logo={logo}
                         tagline='LUXURY ICE CREAM'
-                        tagColor={'--ice-yellow'}
+                        tagColor={'text-(--ice-yellow)'}
                         brand='Cream & Ice'
-                        brandColor='--ice-white'
+                        brandColor={'text-white'}
                     />
                     <p className="text-white/75 text-sm max-w-sm md:text-start mt-3 md:mt-4">Handcrafted Italian ice made with love in London. Family-owned and dedicated to bringing you the freshest, most unique flavors ever.</p>
                     <div className="flex flex-start gap-8 mt-4 md:mt-5">
