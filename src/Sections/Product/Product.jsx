@@ -4,7 +4,7 @@ import products from '../../../seeds'
 
 const Product = () => {
   return (
-    <section className="py-24 px-6 relative overflow-hidden bg-ice-off-white" id='section-products'>
+    <section className="py-24 px-6 relative overflow-hidden bg-(--ice-off-white)" id='section-products'>
       <div className="absolute bg-soft-red h-32 w-32 rounded-full -top-10 -left-10 z-0"></div>
       <div className="absolute bg-soft-yellow h-64 w-64 rounded-full -bottom-15 -right-15 z-0"></div>
       <div className='container mx-auto max-w-6xl'>

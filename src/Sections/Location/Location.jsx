@@ -16,7 +16,7 @@ const boroughOpening = [
 
 const Location = () => {
     return (
-        <section id="section-location" className="py-24 px-6 relative overflow-hidden bg-teal">
+        <section id="section-location" className="py-24 px-6 relative overflow-hidden bg-(--ice-teal)">
             <div className="container max-w-6xl mx-auto">
                 <div className="text-center mb-10 md:mb-16">
                     <span className="inline-block bg-white/15 text-white py-1 px-4 rounded-full mb-4 md:mb-6">Come See Us</span>
