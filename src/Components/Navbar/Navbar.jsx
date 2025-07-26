@@ -22,19 +22,19 @@ function Navbar({ toggleMenu, menuActive }) {
                     linkText='Home'
                 />
                 <NavItem
-                    link='flavors'
+                    link='/flavors'
                     linkText='Flavors'
                 />
                 <NavItem
-                    link='catering'
+                    link='/catering'
                     linkText='Catering'
                 />
                 <NavItem
-                    link='locations'
+                    link='/locations'
                     linkText='Locations'
                 />
                 <NavItem
-                    link='careers'
+                    link='/careers'
                     linkText='Careers'
                 />
             </div>
