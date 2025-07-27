@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const LocationCard = ({ heading, shopImage, shopName, shopAddress, openTimes }) => {
     return (
         <div className="container p-4 md:p-6 bg-white/10 shadow-xl rounded-xl border border-white/20 hover-lift">
@@ -29,10 +31,10 @@ const LocationCard = ({ heading, shopImage, shopName, shopAddress, openTimes }) 
             </div>
             <div className="text-center font-robo">
                 <p className="text-white/60 text-sm md:text-md mb-4">Visit our stores today and try our delicious flavors!</p>
-                <a href="/cream_and_ice/locations">
+                <NavLink to="/locations">
                     <button className="inline-flex justify-center items-center border border-white rounded-lg py-2 md:py-3 px-4 md:px-6 mb-3 md:mb-4 text-white text-sm md:text-md font-medium bg-transparent hover:bg-(--ice-yellow) hover:text-black ease-in duration-200 cursor-pointer"
                     >Get Directions</button>
-                </a>
+                </NavLink>
             </div>
         </div>
     )

@@ -12,16 +12,16 @@ import Footer from '../Sections/Footer/Footer'
 import storyPhoto from '../assets/ice-cream-cones.jpg'
 
 
-const HomePage = ({ toggleMenu, menuToggle }) => {
+const HomePage = ({ toggleMenu, menuActive }) => {
     return (
         <>
             <header className='sticky top-0 left-0 bg-white z-50 shadow-md py-3 px-5 md:px-8'>
                 <div className="container mx-auto px-8">
-                    <Navbar toggleMenu={toggleMenu} menuActive={menuToggle} />
+                    <Navbar toggleMenu={toggleMenu} menuActive={menuActive} />
                 </div>
-                <MobileNav menuActive={menuToggle} />
+                <MobileNav toggleMenu={toggleMenu} menuActive={menuActive} />
             </header>
-            <main>
+            <main className='page-fade-in'>
                 <HomeBanner />
                 <BannerCarousel />
                 <Story storyPhoto={storyPhoto} />

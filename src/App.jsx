@@ -14,14 +14,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      "menuToggle": false
+      "menuActive": false
     }
   }
 
   toggleMenu = () => {
     this.setState(prevState => ({
       ...this.state,
-      "menuToggle": !prevState.menuToggle
+      "menuActive": !prevState.menuActive
     }))
   }
 
@@ -29,11 +29,11 @@ class App extends Component {
     return (
       <>
         <Routes>
-          <Route exact path='/' element={<HomePage toggleMenu={this.toggleMenu} menuToggle={this.state.menuToggle} />} />
-          <Route exact path='/flavors' element={<FlavorsPage toggleMenu={this.toggleMenu} menuToggle={this.state.menuToggle} />} />
-          <Route exact path='/catering' element={<CateringPage toggleMenu={this.toggleMenu} menuToggle={this.state.menuToggle} />} />
-          <Route exact path='/locations' element={<LocationsPage toggleMenu={this.toggleMenu} menuToggle={this.state.menuToggle} />} />
-          <Route exact path='/careers' element={<CareersPage toggleMenu={this.toggleMenu} menuToggle={this.state.menuToggle} />} />
+          <Route exact path='/' element={<HomePage toggleMenu={this.toggleMenu} menuActive={this.state.menuActive} />} />
+          <Route exact path='/flavors' element={<FlavorsPage toggleMenu={this.toggleMenu} menuActive={this.state.menuActive} />} />
+          <Route exact path='/catering' element={<CateringPage toggleMenu={this.toggleMenu} menuActive={this.state.menuActive} />} />
+          <Route exact path='/locations' element={<LocationsPage toggleMenu={this.toggleMenu} menuActive={this.state.menuActive} />} />
+          <Route exact path='/careers' element={<CareersPage toggleMenu={this.toggleMenu} menuActive={this.state.menuActive} />} />
         </Routes>
       </>
     )

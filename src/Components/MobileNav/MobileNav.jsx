@@ -1,6 +1,6 @@
 import NavItem from "../Navbar/NavItem/NavItem";
 
-const MobileNav = ({ menuActive }) => {
+const MobileNav = ({ menuActive, toggleMenu }) => {
     const toggleClass = menuActive ? '' : 'translate-x-full'
 
     return (
@@ -8,22 +8,32 @@ const MobileNav = ({ menuActive }) => {
             <div className="flex flex-col mx-auto items-center justify-center gap-10 mt-20">
                 <NavItem
                     linkText='Home'
+                    toggleMenu={toggleMenu}
+                    menuActive={menuActive}
                 />
                 <NavItem
-                    link='flavors'
+                    link='/flavors'
                     linkText='Flavors'
+                    toggleMenu={toggleMenu}
+                    menuActive={menuActive}
                 />
                 <NavItem
-                    link='catering'
+                    link='/catering'
                     linkText='Catering'
+                    toggleMenu={toggleMenu}
+                    menuActive={menuActive}
                 />
                 <NavItem
-                    link='locations'
+                    link='/locations'
                     linkText='Locations'
+                    toggleMenu={toggleMenu}
+                    menuActive={menuActive}
                 />
                 <NavItem
-                    link='careers'
+                    link='/careers'
                     linkText='Careers'
+                    toggleMenu={toggleMenu}
+                    menuActive={menuActive}
                 />
             </div>
         </div>

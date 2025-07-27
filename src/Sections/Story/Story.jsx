@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Story = ({ storyPhoto }) => {
     return (
         <section className='py-24 px-6 relative overflow-hidden bg-white' id='section-story'>
@@ -31,9 +33,9 @@ const Story = ({ storyPhoto }) => {
                                 <p className="text-sm text-content">Happy Customers</p>
                             </div>
                         </div>
-                        <a href="/">
-                            <button className="bg-teal text-white py-2 px-8 rounded-lg font-robo text-md">Vist Us Today</button>
-                        </a>
+                        <NavLink to="/locations">
+                            <button className="bg-(--ice-teal) text-white py-2 px-8 rounded-lg font-robo font-medium text-md cursor-pointer hover:bg-white border-2 border-transparent hover:border-(--ice-teal) hover:text-(--ice-teal) transition-color duration-250">Vist Us Today</button>
+                        </NavLink>
                     </div>
                 </div>
             </div>

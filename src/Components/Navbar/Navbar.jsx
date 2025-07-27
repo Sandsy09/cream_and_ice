@@ -20,22 +20,32 @@ function Navbar({ toggleMenu, menuActive }) {
             <div id='screen-nav' className='flex item-center space-x-8'>
                 <NavItem
                     linkText='Home'
+                    toggleMenu={toggleMenu}
+                    menuActive={menuActive}
                 />
                 <NavItem
                     link='/flavors'
                     linkText='Flavors'
+                    toggleMenu={toggleMenu}
+                    menuActive={menuActive}
                 />
                 <NavItem
                     link='/catering'
                     linkText='Catering'
+                    toggleMenu={toggleMenu}
+                    menuActive={menuActive}
                 />
                 <NavItem
                     link='/locations'
                     linkText='Locations'
+                    toggleMenu={toggleMenu}
+                    menuActive={menuActive}
                 />
                 <NavItem
                     link='/careers'
                     linkText='Careers'
+                    toggleMenu={toggleMenu}
+                    menuActive={menuActive}
                 />
             </div>
             <div

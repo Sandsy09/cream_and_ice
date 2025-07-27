@@ -43,8 +43,16 @@ const Location = () => {
                         openTimes={boroughOpening}
                     />
                 </div>
-                <div className="flex">
-
+                <div className="text-center mt-12">
+                    <a href="/locations">
+                    <button className='inline-flex gap-2 items-center justify-center mx-auto space-between font-robo font-medium bg-(--ice-yellow) text-(--ice-teal) py-2 px-5 md:px-7 rounded-lg cursor-pointer hover:bg-(--ice-teal) border-2 border-transparent hover:border-(--ice-yellow) hover:text-(--ice-yellow) transition-color duration-250'>
+                        <span>Come vistit us!</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-arrow-right ml-2">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </button>
+                    </a>
                 </div>
             </div>
         </section>
