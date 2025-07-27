@@ -1,8 +1,8 @@
-import lavenderIceCream from '../src/assets/lavender-ice-cream.jpg'
-import chocolateIceCream from '../src/assets/chocolate-ice-cream.jpg'
-import vanillaIceCream from '../src/assets/vanilla-ice-cream.jpg'
-import strawberryIceCream from '../src/assets/strawberry-ice-cream.jpg'
-import lemonIceCream from '../src/assets/lemon-ice-cream.jpg'
+// import lavenderIceCream from '../src/assets/lavender-ice-cream.jpg'
+// import chocolateIceCream from '../src/assets/chocolate-ice-cream.jpg'
+// import vanillaIceCream from '../src/assets/vanilla-ice-cream.jpg'
+// import strawberryIceCream from '../src/assets/strawberry-ice-cream.jpg'
+// import lemonIceCream from '../src/assets/lemon-ice-cream.jpg'
 
 const products = [
     {
@@ -13,7 +13,7 @@ const products = [
         "category": "Rich &  Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
-        "image": vanillaIceCream
+        "image": 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/vanilla-ice-cream_xz5zih.jpg'
     },
     {
         "id": 2,
@@ -23,7 +23,7 @@ const products = [
         "category": "Rich &  Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
-        "image": chocolateIceCream
+        "image": 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649850/cream_and_ice/chocolate-ice-cream_ssogmx.jpg'
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@ const products = [
         "category": "Rich &  Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
-        "image": strawberryIceCream
+        "image": 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/strawberry-ice-cream_gzjayr.jpg'
     },
     {
         "id": 4,
@@ -53,7 +53,7 @@ const products = [
         "category": "Rich &  Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
-        "image": lemonIceCream
+        "image": 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649848/cream_and_ice/lemon-ice-cream_bwnl0t.jpg'
     },
     {
         "id": 6,
@@ -63,7 +63,7 @@ const products = [
         "category": "Rich &  Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
-        "image": lavenderIceCream
+        "image": 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649848/cream_and_ice/lavender-ice-cream_zjrdsv.jpg'
     },
     {
         "id": 7,

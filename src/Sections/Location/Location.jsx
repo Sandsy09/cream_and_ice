@@ -1,6 +1,9 @@
-import sohoShop from '../../assets/sohoShop.jpg'
-import boroughShop from '../../assets/boroughShop.jpg'
+// import sohoShop from '../../assets/sohoShop.jpg'
+// import boroughShop from '../../assets/boroughShop.jpg'
 import LocationCard from "../../Components/LocationCard/LocationCard";
+
+const sohoShop = 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/sohoShop_emkppi.jpg'
+const boroughShop = 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/boroughShop_nmb2jp.jpg'
 
 const sohoOpening = [
     "Mon-Fri: 12pm - 9pm",

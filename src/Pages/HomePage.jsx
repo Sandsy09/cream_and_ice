@@ -9,7 +9,9 @@ import Reviews from '../Sections/Reviews/Reviews'
 import Careers from '../Sections/Careers/Careers'
 import Footer from '../Sections/Footer/Footer'
 
-import storyPhoto from '../assets/ice-cream-cones.jpg'
+// import storyPhoto from '../assets/ice-cream-cones.jpg'
+
+const storyPhoto = 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/ice-cream-cones_wlkq2u.jpg'
 
 
 const HomePage = ({ toggleMenu, menuActive }) => {

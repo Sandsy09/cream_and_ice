@@ -1,4 +1,6 @@
-import banner from '../../assets/ice-cream-banner.jpg'
+// import banner from '../../assets/ice-cream-banner.jpg'
+
+const banner = 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649848/cream_and_ice/ice-cream-banner_iyzbh5.jpg'
 
 const HomeBanner = () => {
     return (
