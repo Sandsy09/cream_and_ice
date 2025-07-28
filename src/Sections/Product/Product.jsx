@@ -21,7 +21,7 @@ const Product = () => {
       </div>
       <div className="text-center mt-12">
         <a href="/flavors">
-          <button className='inline-flex gap-2 items-center justify-center mx-auto space-between font-robo font-medium bg-(--ice-teal) text-white py-2 px-5 md:px-7 rounded-lg cursor-pointer hover:bg-white border-2 border-transparent hover:border-(--ice-teal) hover:text-(--ice-teal) transition-color duration-250'>
+          <button className='z-1 relative inline-flex gap-2 items-center justify-center mx-auto space-between font-robo font-medium bg-(--ice-teal) text-white py-2 px-5 md:px-7 rounded-lg cursor-pointer hover:bg-white border-2 border-transparent hover:border-(--ice-teal) hover:text-(--ice-teal) transition-color duration-250'>
             <span>View all our flavors</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-arrow-right ml-2">
               <path d="M5 12h14"></path>

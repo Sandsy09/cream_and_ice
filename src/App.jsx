@@ -1,6 +1,7 @@
-import { Component } from 'react'
+import { Component, useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
 
+import Navigation from './Sections/Navigation/Navigation';
 import HomePage from './Pages/HomePage'
 import FlavorsPage from './Pages/FlavorsPage';
 import CateringPage from './Pages/CateringPage';
@@ -10,34 +11,42 @@ import CareersPage from './Pages/CareersPage';
 import './App2.css'
 
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      "menuActive": false
-    }
-  }
+// class App extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       "menuActive": false
+//     }
+//   }
 
-  toggleMenu = () => {
-    this.setState(prevState => ({
-      ...this.state,
-      "menuActive": !prevState.menuActive
-    }))
-  }
+//   toggleMenu = () => {
+//     this.setState(prevState => ({
+//       ...this.state,
+//       "menuActive": !prevState.menuActive
+//     }))
+//   }
 
-  render() {
-    return (
-      <>
-        <Routes>
-          <Route exact path='/' element={<HomePage toggleMenu={this.toggleMenu} menuActive={this.state.menuActive} />} />
-          <Route exact path='/flavors' element={<FlavorsPage toggleMenu={this.toggleMenu} menuActive={this.state.menuActive} />} />
-          <Route exact path='/catering' element={<CateringPage toggleMenu={this.toggleMenu} menuActive={this.state.menuActive} />} />
-          <Route exact path='/locations' element={<LocationsPage toggleMenu={this.toggleMenu} menuActive={this.state.menuActive} />} />
-          <Route exact path='/careers' element={<CareersPage toggleMenu={this.toggleMenu} menuActive={this.state.menuActive} />} />
-        </Routes>
-      </>
-    )
-  }
+const App = () => {
+  const [menuActive, setMenuActive] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuActive(!menuActive)
+  };
+
+  return (
+    <>
+      <Routes>
+        <Route path='/' element={<Navigation toggleMenu={toggleMenu} menuActive={menuActive} />}>
+          <Route index element={<HomePage />} />
+          <Route path='flavors' element={<FlavorsPage />} />
+          <Route path='catering' element={<CateringPage />} />
+          <Route path='locations' element={<LocationsPage />} />
+          <Route path='careers' element={<CareersPage />} />
+        </Route>
+      </Routes>
+    </>
+  )
 }
+// }
 
 export default App;

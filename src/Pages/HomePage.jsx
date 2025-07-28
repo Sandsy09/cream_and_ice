@@ -1,5 +1,3 @@
-import Navbar from '../Components/Navbar/Navbar'
-import MobileNav from '../Components/MobileNav/MobileNav'
 import BannerCarousel from '../Components/BannerCarousel/BannerCarousel'
 import HomeBanner from '../Components/HomeBanner/HomeBanner'
 import Story from '../Sections/Story/Story'
@@ -14,15 +12,9 @@ import Footer from '../Sections/Footer/Footer'
 const storyPhoto = 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/ice-cream-cones_wlkq2u.jpg'
 
 
-const HomePage = ({ toggleMenu, menuActive }) => {
+const HomePage = () => {
     return (
         <>
-            <header className='sticky top-0 left-0 bg-white z-50 shadow-md py-3 px-5 md:px-8'>
-                <div className="container mx-auto px-8">
-                    <Navbar toggleMenu={toggleMenu} menuActive={menuActive} />
-                </div>
-                <MobileNav toggleMenu={toggleMenu} menuActive={menuActive} />
-            </header>
             <main className='page-fade-in'>
                 <HomeBanner />
                 <BannerCarousel />
