@@ -27,6 +27,9 @@
   --ice-off-white: #F9F9F9;
   --ice-text-content: rgba(10, 16, 13, 0.7);
 
+  /* Timing functions */
+  --ice-timging-cb1: cubic-bezier(0.165, 0.84, 0.44, 1);
+
   /* Review Theme Colors */
   --yelp-review: #FF1A1A;
   --google-review: #4285F4;
