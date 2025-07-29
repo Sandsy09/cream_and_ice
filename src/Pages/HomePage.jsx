@@ -13,20 +13,19 @@ const storyPhoto = 'https://res.cloudinary.com/dxadixl1i/image/upload/v175364984
 
 
 const HomePage = ({ products, filteredProducts, selectCategory }) => {
+    
     return (
         <>
             <main className='page-fade-in'>
                 <HomeBanner />
                 <BannerCarousel />
                 <Story storyPhoto={storyPhoto} />
-                <Product products={products} filteredProducts={filteredProducts} selectCategory={selectCategory}/>
+                <Product products={products} filteredProducts={filteredProducts} selectCategory={selectCategory} />
                 <Location />
                 <Reviews />
                 <Careers />
             </main>
-            <footer className='bg-(--ice-teal) text-white font-robo pt-12 pb-6'>
-                <Footer />
-            </footer>
+            <Footer />
         </>
     );
 };

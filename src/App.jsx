@@ -32,12 +32,14 @@ const App = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [filteredProductsFlavorPage, setFilteredProductsFlavorPage] = useState([]);
 
   useEffect(() => {
     setProducts(productData)
     setFilteredProducts(productData.filter((product) =>
       product.category.toLowerCase().includes("rich & induldgent")
     ))
+    setFilteredProductsFlavorPage(productData)
   }, []);
 
   const toggleMenu = () => {
@@ -47,19 +49,36 @@ const App = () => {
   const handleProductCategorySelection = (event) => {
     event.preventDefault()
     const selectedCategory = event.target.textContent.toLowerCase();
-    const newFilteredProducts = products.filter((product) =>
-      product.category.toLowerCase().includes(selectedCategory)
-    );
+    const selectedName = event.target.name.toLowerCase();
 
-    setFilteredProducts(newFilteredProducts);
+    if (selectedName === 'flavor-page-selector' && selectedCategory === "all flavors") {
+      console.log("HIT ALLL")
+      setFilteredProductsFlavorPage(products);
+
+    } else if (selectedName === 'flavor-page-selector') {
+      const newFilteredProducts = products.filter((product) =>
+        product.category.toLowerCase().includes(selectedCategory)
+      );
+      
+      setFilteredProductsFlavorPage(newFilteredProducts);
+
+    } else {
+      const newFilteredProducts = products.filter((product) =>
+        product.category.toLowerCase().includes(selectedCategory)
+      );
+  
+      setFilteredProducts(newFilteredProducts);
+
+    }
+
   }
 
   return (
     <>
       <Routes>
         <Route path='/' element={<Navigation toggleMenu={toggleMenu} menuActive={menuActive} />}>
-          <Route index element={<HomePage products={products} filteredProducts={filteredProducts} selectCategory={handleProductCategorySelection}/>} />
-          <Route path='flavors' element={<FlavorsPage />} />
+          <Route index element={<HomePage products={products} filteredProducts={filteredProducts} selectCategory={handleProductCategorySelection} />} />
+          <Route path='flavors' element={<FlavorsPage products={products} filteredProducts={filteredProductsFlavorPage} selectCategory={handleProductCategorySelection} />} />
           <Route path='catering' element={<CateringPage />} />
           <Route path='locations' element={<LocationsPage />} />
           <Route path='careers' element={<CareersPage />} />

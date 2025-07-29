@@ -9,6 +9,13 @@ const Product = ({ products, filteredProducts, selectCategory }) => {
     // useEffect(() => {
     //   console.log(window.innerWidth)
     // }, [])
+    
+    // const shuffle = (arr) => {
+    //   arr.sort(() => Math.random - 0.5);
+    // }
+
+    // const shuffledFilteredProducts = shuffle(filteredProducts)
+    
 
     const categories = [];
 
@@ -41,9 +48,6 @@ const Product = ({ products, filteredProducts, selectCategory }) => {
               }
             })
           }
-          {/* <button className="bg-(--ice-teal) text-white rounded-full px-4 py-2 shadow-md">Rich & Indulgent</button>
-          <button className="bg-(--ice-teal) text-white rounded-full px-4 py-2 shadow-md">Spiced & Surprising</button>
-          <button className="bg-(--ice-teal) text-white rounded-full px-4 py-2 shadow-md">Wacky & Wonderful</button> */}
         </div>
         <ProductList products={filteredProducts} />
       </div>
