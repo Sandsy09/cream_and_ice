@@ -12,14 +12,14 @@ import Footer from '../Sections/Footer/Footer'
 const storyPhoto = 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/ice-cream-cones_wlkq2u.jpg'
 
 
-const HomePage = () => {
+const HomePage = ({ products, filteredProducts, selectCategory }) => {
     return (
         <>
             <main className='page-fade-in'>
                 <HomeBanner />
                 <BannerCarousel />
                 <Story storyPhoto={storyPhoto} />
-                <Product />
+                <Product products={products} filteredProducts={filteredProducts} selectCategory={selectCategory}/>
                 <Location />
                 <Reviews />
                 <Careers />

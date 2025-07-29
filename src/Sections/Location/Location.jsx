@@ -1,5 +1,6 @@
 // import sohoShop from '../../assets/sohoShop.jpg'
 // import boroughShop from '../../assets/boroughShop.jpg'
+import { NavLink } from "react-router-dom";
 import LocationCard from "../../Components/LocationCard/LocationCard";
 
 const sohoShop = 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/sohoShop_emkppi.jpg'
@@ -47,15 +48,15 @@ const Location = () => {
                     />
                 </div>
                 <div className="text-center mt-12">
-                    <a href="/locations">
+                    <NavLink to="/locations">
                     <button className='inline-flex gap-2 items-center justify-center mx-auto space-between font-robo font-medium bg-(--ice-yellow) text-(--ice-teal) py-2 px-5 md:px-7 rounded-lg cursor-pointer hover:bg-(--ice-teal) border-2 border-transparent hover:border-(--ice-yellow) hover:text-(--ice-yellow) transition-color duration-250'>
                         <span>Come vistit us!</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-arrow-right ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
                         <path d="M5 12h14"></path>
                         <path d="m12 5 7 7-7 7"></path>
                         </svg>
                     </button>
-                    </a>
+                    </NavLink>
                 </div>
             </div>
         </section>

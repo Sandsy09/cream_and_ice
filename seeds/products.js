@@ -4,13 +4,13 @@
 // import strawberryIceCream from '../src/assets/strawberry-ice-cream.jpg'
 // import lemonIceCream from '../src/assets/lemon-ice-cream.jpg'
 
-const products = [
+const productData = [
     {
         "id": 1,
         "title": "Vanilla",
         "price": 5.99,
         "product_type": "Ice-cream",
-        "category": "Rich &  Induldgent",
+        "category": "Rich & Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
         "image": 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/vanilla-ice-cream_xz5zih.jpg'
@@ -20,7 +20,7 @@ const products = [
         "title": "Chocolate",
         "price": 5.99,
         "product_type": "Ice-cream",
-        "category": "Rich &  Induldgent",
+        "category": "Rich & Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
         "image": 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649850/cream_and_ice/chocolate-ice-cream_ssogmx.jpg'
@@ -30,7 +30,7 @@ const products = [
         "title": "Strawberry",
         "price": 5.99,
         "product_type": "Ice-cream",
-        "category": "Rich &  Induldgent",
+        "category": "Rich & Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
         "image": 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/strawberry-ice-cream_gzjayr.jpg'
@@ -40,7 +40,7 @@ const products = [
         "title": "Cherry",
         "price": 5.99,
         "product_type": "Ice-cream",
-        "category": "Rich &  Induldgent",
+        "category": "Rich & Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
         "image": "https://images.unsplash.com/photo-1646318754907-dc7c0d236a97?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -50,7 +50,7 @@ const products = [
         "title": "Lemon",
         "price": 5.99,
         "product_type": "Ice-cream",
-        "category": "Rich &  Induldgent",
+        "category": "Rich & Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
         "image": 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649848/cream_and_ice/lemon-ice-cream_bwnl0t.jpg'
@@ -60,7 +60,7 @@ const products = [
         "title": "Lavender",
         "price": 5.99,
         "product_type": "Ice-cream",
-        "category": "Rich &  Induldgent",
+        "category": "Rich & Induldgent",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
         "image": 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649848/cream_and_ice/lavender-ice-cream_zjrdsv.jpg'
@@ -75,6 +75,16 @@ const products = [
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
         "image": "https://images.unsplash.com/photo-1646318754907-dc7c0d236a97?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
+    {
+        "id": 8,
+        "title": "Cinnamon and Biscuit",
+        "price": 5.99,
+        "product_type": "Ice-cream",
+        "category": "Spiced & Surprising",
+        "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo obcaeca",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ex, aliquam in eos soluta dignissimos optio repellat adipisci rem exercitationem aspernatur nesciunt quae ducimus laboriosam fugit distinctio totam. Asperiores, nostrum.",
+        "image": "https://images.unsplash.com/photo-1646318754907-dc7c0d236a97?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
 ];
 
-export default products;
+export default productData;

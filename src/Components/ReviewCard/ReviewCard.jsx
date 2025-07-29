@@ -18,7 +18,10 @@ const ReviewCard = ({ rating, reviewFrom, content, author, date }) => {
 
     return (
         <div className="relative w-fit">
-            <div className="font-robo bg-white shadow-lg rounded-lg p-6 overflow-hidden hover-lift hover:opacity-25">
+            <div className="peer absolute z-1 top-0 left-0 w-full h-full flex items-center justify-center font-robo font-bold hover:backdrop-blur-[2px] opacity-0 hover:opacity-100 transition-opacity peer-duration-300 over-hidden">
+                <a href="" className="bg-(--ice-teal) text-white py-1 px-3 rounded-xl shadow-lg">Read Full Review</a>
+            </div>
+            <div className="font-robo bg-white shadow-lg rounded-lg p-6 overflow-hidden transition-transform duration-300 ease-(--ice-timing-cb1) peer-hover:-translate-y-[0.5rem]">
                 <div className="flex justify-between items-center mb-3">
                     <Star rating={rating} />
                     <span className={reviewFromStyles}>{reviewFrom}</span>
@@ -28,9 +31,6 @@ const ReviewCard = ({ rating, reviewFrom, content, author, date }) => {
                     <span className="font-medium text-sm">{author}</span>
                     <span className="text-(--ice-text-content)/50 text-sm">{date}</span>
                 </div>
-            </div>
-            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center font-robo font-bold hover:backdrop-blur-[2px] opacity-0 hover:opacity-100 transition-opacity duration-300 over-hidden">
-                <a href="" className="bg-(--ice-teal) text-white py-1 px-3 rounded-xl shadow-lg">Read Full Review</a>
             </div>
         </div>
     );
