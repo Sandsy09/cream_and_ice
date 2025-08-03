@@ -29,10 +29,10 @@ import './App2.css'
 //   }
 
 const App = () => {
-  const [menuActive, setMenuActive] = useState(false);
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [filteredProductsFlavorPage, setFilteredProductsFlavorPage] = useState([]);
+  const [productModalOpen, setProductModalOpen] = useState(false);
 
   useEffect(() => {
     setProducts(productData)
@@ -42,9 +42,13 @@ const App = () => {
     setFilteredProductsFlavorPage(productData)
   }, []);
 
-  const toggleMenu = () => {
-    setMenuActive(!menuActive)
-  };
+  const toggleProductModal = () => {
+    setProductModalOpen(!productModalOpen)
+  }
+
+  const getProductModalContent = (event) => {
+    console.log(event)
+  }
 
   const handleProductCategorySelection = (event) => {
     event.preventDefault()
@@ -76,9 +80,24 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Navigation toggleMenu={toggleMenu} menuActive={menuActive} />}>
-          <Route index element={<HomePage products={products} filteredProducts={filteredProducts} selectCategory={handleProductCategorySelection} />} />
-          <Route path='flavors' element={<FlavorsPage products={products} filteredProducts={filteredProductsFlavorPage} selectCategory={handleProductCategorySelection} />} />
+        <Route path='/' element={<Navigation />}>
+          <Route index element={
+            <HomePage
+              products={products}
+              filteredProducts={filteredProducts}
+              selectCategory={handleProductCategorySelection}
+              productModalOpen={productModalOpen}
+              toggleProductModal={toggleProductModal}
+              getProductModalContent={getProductModalContent}
+            />
+          } />
+          <Route path='flavors' element={
+            <FlavorsPage
+              products={products}
+              filteredProducts={filteredProductsFlavorPage}
+              selectCategory={handleProductCategorySelection}
+            />
+          } />
           <Route path='catering' element={<CateringPage />} />
           <Route path='locations' element={<LocationsPage />} />
           <Route path='careers' element={<CareersPage />} />

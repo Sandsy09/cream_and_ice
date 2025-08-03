@@ -340,3 +340,10 @@ body {
   animation: page-fade-in 1s ease-out forwards;
 }
 
+
+/* Modal CSS */
+
+#product-modal-root {
+  position: relative;
+  z-index: 999;
+}

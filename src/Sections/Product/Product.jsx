@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import ProductList from '../../Components/ProductList/ProductList'
 
 
-const Product = ({ products, filteredProducts, selectCategory }) => {
+const Product = ({ products, filteredProducts, selectCategory, toggleProductModal, getProductModalContent }) => {
 
     // useEffect(() => {
     //   console.log(window.innerWidth)
@@ -17,13 +17,14 @@ const Product = ({ products, filteredProducts, selectCategory }) => {
     // const shuffledFilteredProducts = shuffle(filteredProducts)
     
 
-    const categories = [];
+  const categories = [];
 
-    products.forEach((product) => {
-      if (!categories.includes(product.category)) {
-          categories.push(product.category)
-      }
-    })
+  products.forEach((product) => {
+    if (!categories.includes(product.category)) {
+        categories.push(product.category)
+    }
+  })
+  
 
   return (
     <section className="py-24 px-6 relative overflow-hidden bg-(--ice-off-white)" id='section-products'>
@@ -49,7 +50,7 @@ const Product = ({ products, filteredProducts, selectCategory }) => {
             })
           }
         </div>
-        <ProductList products={filteredProducts} />
+        <ProductList products={filteredProducts} toggleProductModal={toggleProductModal} getProductModalContent={getProductModalContent}/>
       </div>
       <div className="text-center mt-12">
         <NavLink to="/flavors">

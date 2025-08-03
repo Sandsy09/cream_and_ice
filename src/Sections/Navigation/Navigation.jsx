@@ -1,8 +1,16 @@
+import { useState } from "react";
+
 import Navbar from "../../Components/Navbar/Navbar";
 import MobileNav from "../../Components/MobileNav/MobileNav";
 import { Outlet } from "react-router-dom";
 
-const Navigation = ({ toggleMenu, menuActive }) => {
+const Navigation = () => {
+    const [menuActive, setMenuActive] = useState(false);
+    
+    const toggleMenu = () => {
+        setMenuActive(!menuActive)
+    };
+
     return (
         <>
             <header className='sticky top-0 left-0 bg-white z-50 shadow-md py-3 px-5 md:px-8'>
