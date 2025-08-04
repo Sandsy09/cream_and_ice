@@ -1,6 +1,9 @@
-const ProductCard = ({ imageUrl, title, description, category }) => {
+
+
+const ProductCard = ({ productId, imageUrl, title, description, category, handleProductClick }) => {
+    
     return (
-        <div className="z-1 bg-white overflow-hidden rounded-xl shadow-md hover-lift cursor-pointer">
+        <div onClick={() => handleProductClick(productId)} className="z-1 bg-white overflow-hidden rounded-xl shadow-md hover-lift cursor-pointer">
             <div className="h-48 overflow-hidden">
                 <img className="w-full h-full object-cover hover:scale-125 duration-300" src={imageUrl} alt={title} />
             </div>

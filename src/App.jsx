@@ -29,56 +29,28 @@ import './App2.css'
 //   }
 
 const App = () => {
-  const [menuActive, setMenuActive] = useState(false);
-  const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [filteredProductsFlavorPage, setFilteredProductsFlavorPage] = useState([]);
+  // const [productModalOpen, setProductModalOpen] = useState(false);
 
-  useEffect(() => {
-    setProducts(productData)
-    setFilteredProducts(productData.filter((product) =>
-      product.category.toLowerCase().includes("rich & induldgent")
-    ))
-    setFilteredProductsFlavorPage(productData)
-  }, []);
+  // const toggleProductModal = () => {
+  //   setProductModalOpen(!productModalOpen)
+  // }
 
-  const toggleMenu = () => {
-    setMenuActive(!menuActive)
-  };
-
-  const handleProductCategorySelection = (event) => {
-    event.preventDefault()
-    const selectedCategory = event.target.textContent.toLowerCase();
-    const selectedName = event.target.name.toLowerCase();
-
-    if (selectedName === 'flavor-page-selector' && selectedCategory === "all flavors") {
-      console.log("HIT ALLL")
-      setFilteredProductsFlavorPage(products);
-
-    } else if (selectedName === 'flavor-page-selector') {
-      const newFilteredProducts = products.filter((product) =>
-        product.category.toLowerCase().includes(selectedCategory)
-      );
-      
-      setFilteredProductsFlavorPage(newFilteredProducts);
-
-    } else {
-      const newFilteredProducts = products.filter((product) =>
-        product.category.toLowerCase().includes(selectedCategory)
-      );
-  
-      setFilteredProducts(newFilteredProducts);
-
-    }
-
-  }
+  // const getProductModalContent = (event) => {
+  //   console.log(event)
+  // }
 
   return (
     <>
       <Routes>
-        <Route path='/' element={<Navigation toggleMenu={toggleMenu} menuActive={menuActive} />}>
-          <Route index element={<HomePage products={products} filteredProducts={filteredProducts} selectCategory={handleProductCategorySelection} />} />
-          <Route path='flavors' element={<FlavorsPage products={products} filteredProducts={filteredProductsFlavorPage} selectCategory={handleProductCategorySelection} />} />
+        <Route path='/' element={<Navigation />}>
+          <Route index element={
+            <HomePage
+              // productModalOpen={productModalOpen}
+              // toggleProductModal={toggleProductModal}
+              // getProductModalContent={getProductModalContent}
+            />
+          } />
+          <Route path='flavors' element={<FlavorsPage />} />
           <Route path='catering' element={<CateringPage />} />
           <Route path='locations' element={<LocationsPage />} />
           <Route path='careers' element={<CareersPage />} />
