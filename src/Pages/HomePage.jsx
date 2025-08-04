@@ -13,29 +13,26 @@ import Footer from '../Sections/Footer/Footer'
 
 const storyPhoto = 'https://res.cloudinary.com/dxadixl1i/image/upload/v1753649849/cream_and_ice/ice-cream-cones_wlkq2u.jpg'
 
-
-const HomePage = ({ products, filteredProducts, selectCategory, productModalOpen, toggleProductModal, getProductModalContent }) => {
+// { products, filteredProducts, selectCategory, productModalOpen, toggleProductModal, getProductModalContent }
+const HomePage = () => {
     
     return (
         <>
-            { productModalOpen && 
+            {/* { productModalOpen && 
                 <ProductModal 
                     productModalOpen={productModalOpen} 
                     toggleProductModal={toggleProductModal}
                 />
                     //<ProductModalContent productModalOpen={productModalOpen} toggleProductModal={toggleProductModal} />
                 //</ProductModal>
-            }
+            } */}
             <main className='page-fade-in'>
                 <HomeBanner />
                 <BannerCarousel />
                 <Story storyPhoto={storyPhoto} />
                 <Product 
-                    products={products} 
-                    filteredProducts={filteredProducts} 
-                    selectCategory={selectCategory} 
-                    toggleProductModal={toggleProductModal}
-                    getProductModalContent={getProductModalContent}
+                    // toggleProductModal={toggleProductModal}
+                    // getProductModalContent={getProductModalContent}
                 />
                 <Location />
                 <Reviews />
